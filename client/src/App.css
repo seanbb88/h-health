@@ -1,0 +1,182 @@
+/* Landing Page */
+.landing-page{
+    background-color: rgb(120, 189, 120); 
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+
+}
+
+.logo{
+    width: 140px;
+    font-size: 70px; 
+    font-family: "Monoton", cursive; 
+    color: white; 
+    position: relative;
+    top:0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.logo-heading {
+    width: 40%; 
+    text-align: center; 
+    margin: auto;
+    margin-top: 60px;  
+    font-family: 'Open Sans', sans-serif;
+    color: white; 
+    position: relative;
+    font-size: 40px; 
+    border-bottom: white 1px solid; 
+}
+
+.description-text{
+    width: 70%;
+    color: white; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px; 
+    margin: auto; 
+    margin-top: 5px; 
+    text-align: center; 
+}
+
+.landing-button {
+    display: block;
+    width: 160px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    margin-top: 90px;
+    border: 1px solid white;
+    text-decoration: none; 
+    border-radius: 8px;
+    line-height: 40px; 
+    background: transparent;
+    font-size: 22px; 
+    font-family: 'Open Sans', sans-serif;
+    color: white; 
+}
+
+.landing-button:hover{
+    background-color: white; 
+    color: rgb(120, 189, 120); 
+}
+
+/* Sign in Page */
+.sign-in {
+    background-color: rgb(120, 189, 120); 
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.sign-in-div{
+    background: rgba(245, 245, 245, 0.6);
+    width: 37%;
+    height: 46vh;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 17%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-button{
+    width: 21%;
+    position: absolute;
+    bottom: 57px;
+    left: 16%;
+    background: transparent;
+    border: white solid 1px;
+    color: white;
+    font-size: 14px;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.sign-in-button:hover{
+    background-color:  rgb(120, 189, 120); 
+}
+
+.email-label{
+    position: absolute;
+    top: 71px;
+    left: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.email-input{
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 141px;
+}
+
+.password-label{
+    position: absolute;
+    top: 130px;
+    left: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.password-input{
+    position: absolute;
+    top: 20px; 
+    left: 0px; 
+    width: 141px; 
+}
+
+.sign-in-logo{
+    color: white;
+    margin: auto;
+    font-family: "Monoton", cursive;
+    font-weight: lighter;
+    font-size: 71px;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+}
+
+.sign-in-heading{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    position: absolute;
+    left: 34%;
+    top: 4px;
+    margin-top: 0px;
+}
+
+.create-account-button{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.create-account-button:hover{
+    color: rgb(120, 189, 120); 
+}
+
+/* Sign Up Page */
+
+input[type="date"]::before { 
+	content: attr(data-placeholder);
+	width: 100%;
+}
+
+input[type="date"]::after{
+    content: none; 
+    width: 100%;
+}
