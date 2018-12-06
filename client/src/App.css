@@ -368,8 +368,8 @@ input[type="date"]::after{
 
 .account-user-name {
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
-    margin-top: 11px;
+    color: rgb(5, 68, 5);
+    margin-top: 11px !important;
     margin-left: 11px;
     width: 400px;
     height: 39px;
@@ -389,17 +389,17 @@ input[type="date"]::after{
 
 .year-savings-number{
     font-family: 'Source Sans Pro', sans-serif;
-    margin-top: 1px; 
+    margin-top: 3px !important; 
     margin-bottom: 1px; 
-    color: white; 
+    color: rgb(28, 116, 28); 
     text-align: center; 
 }
 
 .total-savings-number{
     font-family: 'Source Sans Pro', sans-serif;
-    margin-top: 1px; 
+    margin-top: 3px !important; 
     margin-bottom: 1px; 
-    color: white; 
+    color: rgb(28, 116, 28);  
     text-align: center;
 }
 
@@ -408,7 +408,7 @@ input[type="date"]::after{
     font-size: 15px; 
     margin-top: 1px; 
     margin-bottom: 1px; 
-    color: white; 
+    color: black; 
     text-align: center;
 }
 
@@ -417,12 +417,139 @@ input[type="date"]::after{
     font-size: 15px; 
     margin-top: 1px; 
     margin-bottom: 1px; 
-    color: white; 
+    color: black; 
     text-align: center;
 }
 
-.full-account-div{
-    background: red; 
+.full-account-div{ 
     width: 100%; 
     height: 80%;
+    display: flex; 
+    flex-direction: row; 
+}
+
+.half-account-div{
+    width: 53%;
+    background: rgba(245, 245, 245, 0.6);
+    margin-left: 10px;
+    margin-top: 24px;
+    height: 100%;
+    border-radius: 10px;
+    overflow: auto; 
+}
+
+.procedure-done{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black !important;
+    font-size: 30px;  
+}
+
+.history-card{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    width: 93% !important;
+    margin-left: 13px !important;
+    margin-top: 10px !important;
+    height: 125px;
+}
+
+.doc-type{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black; 
+}
+
+.account-num {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black; 
+    margin-bottom: 0 !important;
+    width: 70%;
+    margin-right: 0 !important;
+}
+
+.phone-num{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black; 
+    margin-bottom: 0 !important;  
+    width: 70%; 
+    margin-right: 0 !important; 
+}
+
+.savings-div{
+    position: absolute;
+    width: 150px; 
+    height: 50px;
+    right: 0; 
+    top: 0; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+.money-symbol{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-size: 23px;
+}
+
+.savings-num{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: green;
+    font-size: 35px; 
+}
+
+.break-point {
+    border-bottom: grey solid 1px; 
+    opacity: 0.6; 
+}
+
+.content-div{
+    padding: 10px !important; 
+}
+
+.doctor-avatar{
+    position: absolute !important;
+    right: 17px;
+    bottom: 33px;
+}
+
+.doctor-name{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black; 
+    position: absolute;
+    right: 10px; 
+    bottom: 5px; 
+}
+
+.savings-history{
+    color: grey;  
+    font-family: 'Source Sans Pro', sans-serif !important; 
+    text-align: center; 
+}
+
+.half-account-div2{
+    width: 50%;
+    height: 493px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-div{
+    width: 90%;
+    height: 10%;
+    border-radius: 10px;
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.maps-div{
+    background: rgba(245, 245, 245, 0.6);
+    width: 90%; 
+    height: 85%; 
+    border-radius: 10px; 
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.procedure-search{
+    width: 324px !important; 
 }
