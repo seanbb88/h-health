@@ -4,7 +4,7 @@
   "description": "front end",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd client && npm start"
   },
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/seanbb88/h-health/issues"
   },
-  "homepage": "https://github.com/seanbb88/h-health#readme"
+  "homepage": "https://github.com/seanbb88/h-health#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }

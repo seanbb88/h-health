@@ -1,6 +1,6 @@
 /* Landing Page */
 .landing-page{
-    background-color: rgb(120, 189, 120); 
+    background-color: rgb(162, 223, 186); 
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -16,6 +16,7 @@
     top:0;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: lighter; 
 
 }
 
@@ -24,7 +25,7 @@
     text-align: center; 
     margin: auto;
     margin-top: 60px;  
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: white; 
     position: relative;
     font-size: 40px; 
@@ -34,7 +35,7 @@
 .description-text{
     width: 70%;
     color: white; 
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px; 
     margin: auto; 
     margin-top: 5px; 
@@ -55,18 +56,18 @@
     line-height: 40px; 
     background: transparent;
     font-size: 22px; 
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: white; 
 }
 
 .landing-button:hover{
     background-color: white; 
-    color: rgb(120, 189, 120); 
+    color: rgb(162, 223, 186); 
 }
 
 /* Sign in Page */
 .sign-in {
-    background-color: rgb(120, 189, 120); 
+    background-color: rgb(162, 223, 186); 
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -74,8 +75,8 @@
 
 .sign-in-div{
     background: rgba(245, 245, 245, 0.6);
-    width: 37%;
-    height: 46vh;
+    width: 430px; 
+    height: 44vh;
     border-radius: 20px;
     margin: auto;
     margin-top: 17%;
@@ -87,8 +88,8 @@
 .sign-in-button{
     width: 21%;
     position: absolute;
-    bottom: 57px;
-    left: 16%;
+    bottom: 88px;
+    left: 10%;
     background: transparent;
     border: white solid 1px;
     color: white;
@@ -100,7 +101,7 @@
 }
 
 .sign-in-button:hover{
-    background-color:  rgb(120, 189, 120); 
+    background-color:  rgb(162, 223, 186); 
 }
 
 .email-label{
@@ -109,7 +110,7 @@
     left: 15px;
     color: white;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
 }
 .email-input{
@@ -125,7 +126,7 @@
     left: 15px;
     color: white;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
 }
 .password-input{
@@ -140,7 +141,7 @@
     margin: auto;
     font-family: "Monoton", cursive;
     font-weight: lighter;
-    font-size: 71px;
+    font-size: 107px;
     position: absolute;
     right: 30px;
     top: 80px;
@@ -148,7 +149,7 @@
 
 .sign-in-heading{
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 32px;
     position: absolute;
     left: 34%;
@@ -162,21 +163,266 @@
     bottom: 10px;
     right: 20px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .create-account-button:hover{
-    color: rgb(120, 189, 120); 
+    color: rgb(162, 223, 186); 
 }
 
 /* Sign Up Page */
 
 input[type="date"]::before { 
-	content: attr(data-placeholder);
-	width: 100%;
+    content: attr(data-placeholder);
+    width: 100%;
 }
 
 input[type="date"]::after{
     content: none; 
     width: 100%;
+}
+
+.logo-signup{
+    width: 38px;
+    font-size: 33px;
+    font-family: "Monoton", cursive;
+    color: white;
+    position: relative;
+    font-weight: lighter;
+    top: 3px;
+    left: 9px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sign-up-heading{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;
+    position: absolute;
+    left: 34%;
+    top: 4px;
+    margin-top: 0px;
+}
+
+.sign-up-button{
+    width: 26%;
+    height: 23px;
+    position: absolute;
+    bottom: 33px;
+    right: 39%;
+    line-height: 24px;
+    background: transparent;
+    border: white solid 1px;
+    color: white;
+    font-size: 14px;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sign-up-button:hover{
+    background-color:  rgb(162, 223, 186); 
+}
+
+.full-name-input{
+    width: 86%;
+    padding: 5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.signup-email-input{
+    width: 38%;
+    padding: 5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 105px;
+    left: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+}
+
+.dob-input{
+    width: 38%;
+    padding: 5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 105px;
+    right: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.signup-password-input{
+    width: 38%;
+    padding: 5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 175px;
+    left: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.signup-password-confirm{
+    width: 38%;
+    padding: 5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 175px;
+    right: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.ssn-input{
+    width: 38%;
+    padding: 5px;
+    line-height: 1.4;
+    position: absolute;
+    top: 140px;
+    left: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.person-icon {
+    position: absolute;
+    color: grey;
+    opacity: 0.7;
+    top: 75px;
+    left: 10px;
+    font-size: 22px;
+}
+
+.email-icon{
+    position: absolute;
+    color: grey;
+    opacity: 0.7;
+    top: 112px;
+    left: 6px;
+    font-size: 16px;
+}
+
+.ssn-icon{
+    position: absolute;
+    color: grey;
+    opacity: 0.7;
+    top: 145px;
+    left: 6px;
+    font-size: 18px;
+}
+
+.password-icon{
+    position: absolute;
+    color: grey;
+    opacity: 0.7;
+    top: 181px;
+    left: 5px;
+    font-size: 18px;
+}
+
+.dob-icon{
+    position: absolute;
+    color: grey;
+    opacity: 0.7;
+    top: 111px;
+    right: 207px;
+    font-size: 18px;
+}
+
+/* User Account Page */
+.user-account-div{
+    background: rgba(245, 245, 245, 0.6);
+    width: 750px;
+    height: 75vh;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 8%;
+    position: relative;
+}
+
+.account-info-div{
+    background-color: rgb(166, 173, 166);
+    height:65px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    
+}
+
+.account-user-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 400px;
+    height: 39px;
+    border-right: solid 1px white; 
+}
+
+.year-savings-div{
+    display: flex; 
+    flex-direction: column; 
+}
+
+.total-savings-div{
+    display: flex; 
+    flex-direction: column; 
+    margin-right: 15px; 
+}
+
+.year-savings-number{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 1px; 
+    margin-bottom: 1px; 
+    color: white; 
+    text-align: center; 
+}
+
+.total-savings-number{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 1px; 
+    margin-bottom: 1px; 
+    color: white; 
+    text-align: center;
+}
+
+.year-savings-desc{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px; 
+    margin-top: 1px; 
+    margin-bottom: 1px; 
+    color: white; 
+    text-align: center;
+}
+
+.total-savings-desc{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px; 
+    margin-top: 1px; 
+    margin-bottom: 1px; 
+    color: white; 
+    text-align: center;
+}
+
+.full-account-div{
+    background: red; 
+    width: 100%; 
+    height: 80%;
 }

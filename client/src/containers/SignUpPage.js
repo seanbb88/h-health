@@ -1,56 +1,123 @@
-import React, { Component } from 'react'; 
-import { Link } from "react-router-dom";
-import MaskedField from "react-masked-field"; 
-import Heading from '../component/Heading'; 
+import React, { Component } from 'react';
+import Cookies from 'universal-cookie';
+import Heading from '../component/Heading';
+import Icon from '../component/Icon';
 
-import '../App.css'; 
+
+import '../App.css';
 
 class SignUpPage extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
-            email: "", 
-            password: "", 
-            firstName: "",
-            lastName: "", 
-            ssn: "", 
-            insurerOptions: "", 
-            planId: "", 
+            email: "",
+            password: "",
+            fullName: "",
+            ssn: "",
+            password2: "",
             dob: ""
 
         }
-
+        this.handleChange = this.handleChange.bind(this); 
+        this.handleSubmit = this.handleSubmit.bind(this); 
     }
 
-    handleSubmit(event){
-        event.preventDefault(); 
-        
+    handleSubmit(event) {
+        event.preventDefault();
+        const cookies = new Cookies()
+        cookies.set("fullName", this.state.fullName)
+        cookies.set("email", this.state.email)
+        cookies.set("dob", this.state.dob)
+       
+        this.props.history.push('/account')
     }
-    render(){
-        return(
-            <form 
+
+    handleChange(event){
+        const value = event.target.value
+        const name = event.target.name 
+        this.setState({
+            [name] : value
+        })
+    }
+
+    render() {
+        return (
+            <form
                 onSubmit={this.handleSubmit}
                 className="sign-in-div"
-                >
-                <Heading 
+            >
+                <Heading
+                    className="logo-signup"
+                    headingText="VH"
+                />
+                <Heading
                     headingText="Sign Up"
                     className="sign-up-heading"
                 />
-                    <input  placeholder="First Name" className="first-name-input" type="text" name="firstName" />
-                    <input placeholder="Last Name" className="last-name-input" type="text" name="lastName" />
-                    <input placeholder="Email Address" className="email-input" type="text" name="email" />
-                    <input data-placeholder="Date of birth" className="dob-input" type="date" name="dob" />
-                    <MaskedField mask="999-99-9999"/>
-                    <input placeholder="XXX-XX-XXXX"  className="ssn-input" type="email" name="ssn" maxlength="12" />
-                    <input placeholder="password" className="password-input" type="password" name="password" />
-
-                <Link
-                    className="sign-up-button"
-                    to="/account"
-                >
-                Sign Up   
-                </Link>
+                <Icon class="fas fa-male person-icon" />
+                <Icon class="fas fa-envelope-open email-icon" />
+                <Icon class="fas fa-lock ssn-icon" />
+                <Icon class="fas fa-key password-icon" />
+                <Icon class="far fa-calendar-alt dob-icon" />
+                <input 
+                    name="fullName"
+                    placeholder="Full Name" 
+                    className="full-name-input" 
+                    onChange={this.handleChange} 
+                    type="text" 
+                    fullname={this.state.fullName} 
+                    required 
+                />
+                <input 
+                    name="email"
+                    placeholder="Email Address" 
+                    className="signup-email-input" 
+                    onChange={this.handleChange} 
+                    type="text" 
+                    email={this.state.email} 
+                    required 
+                />
+                <input 
+                    name="dob"
+                    data-placeholder="Date of birth" 
+                    className="dob-input" 
+                    onChange={this.handleChange} 
+                    type="date" 
+                    dob={this.state.dob} 
+                    required 
+                />
+                <input 
+                    name="ssn"
+                    className="ssn-input"
+                    max="12"
+                    onChange={this.handleChange}
+                    ssn={this.state.ssn}
+                    required
+                />
+                <input 
+                    name="password"
+                    placeholder="password" 
+                    className="signup-password-input" 
+                    type="password" 
+                    onChange={this.handleChange} 
+                    password={this.state.password} 
+                    required 
+                />
+                <input 
+                    name="password2"
+                    placeholder="confirm password" 
+                    className="signup-password-confirm" 
+                    onChange={this.handleChange} 
+                    type="password" 
+                    password2={this.state.password2} 
+                    required 
+                />
+                <input 
+                    className="sign-up-button" 
+                    type="submit" 
+                    value="Sign Up" 
+                />
             </form>
         )
     }
