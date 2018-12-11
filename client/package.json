@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.6.1",
+    "dotenv": "^6.2.0",
     "faker": "^4.1.0",
+    "google-maps-react": "^2.0.2",
+    "lodash": "^4.17.11",
+    "minimatch": "^3.0.4",
     "react": "^16.6.3",
+    "react-chartkick": "^0.3.0",
     "react-dom": "^16.6.3",
     "react-masked-field": "^1.1.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "semantic-ui": "^2.4.2",
+    "semantic-ui-react": "^0.84.0",
     "universal-cookie": "^3.0.7"
   },
   "scripts": {

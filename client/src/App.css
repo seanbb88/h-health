@@ -347,7 +347,7 @@ input[type="date"]::after{
 /* User Account Page */
 .user-account-div{
     background: rgba(245, 245, 245, 0.6);
-    width: 750px;
+    width: 850px;
     height: 75vh;
     border-radius: 20px;
     margin: auto;
@@ -425,7 +425,7 @@ input[type="date"]::after{
     width: 100%; 
     height: 80%;
     display: flex; 
-    flex-direction: row; 
+    flex-direction: column; 
 }
 
 .half-account-div{
@@ -552,4 +552,64 @@ input[type="date"]::after{
 
 .procedure-search{
     width: 324px !important; 
+}
+
+.actual-search{
+    width: 100%; 
+}
+
+div.description{
+    width: 230px;
+    font-size: 10px;
+}
+
+input.prompt{
+    width: 350px; 
+}
+
+div.ui.icon.input {
+    margin-left: 190px;
+    margin-top: 40px;
+}
+
+div.results.transition.visible {
+    margin-left: 180px; 
+}
+
+.home-address{
+    position: absolute; 
+    color: rgb(5, 68, 5);
+    font-size: 10px; 
+    left: 12px;  
+    top: 65px; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+    
+}
+.work-address{
+    position: absolute;
+    color: rgb(5, 68, 5);
+    font-size: 10px;
+    left: 12px;
+    top: 77px;
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+.savings-card{
+    position: relative;
+    width: 95%;
+    display: flex; 
+    top: 10px; 
+    flex-direction: row;
+    margin: auto; 
+}
+
+.savings-card-line{
+    width: 35%;
+    
+}
+.savings-card-bar{
+    width: 35%; 
+    
 }
