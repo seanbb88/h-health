@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Icon from '../component/Icon'; 
 import Heading from '../component/Heading';
 import Savings from '../component/Savings';
 import SearchBar from '../component/SearchBar';
@@ -15,7 +16,7 @@ class UserAccount extends Component {
             fullName: "Brian Dennehy",
             email: "Brian@Gmail.com",
             homeAddress: "401 N Walbash Ave, Chicago, IL 60611",
-            workAddress: "320 N Morgan St, Chicago, IL 60607",
+            workAddress: "1106 W Lawrence Ave, Chicago, IL 60640",
             dob: "05/19/1987",
             searchTerm: ""
         }
@@ -55,6 +56,8 @@ class UserAccount extends Component {
                     />
                 </div>
                 <div className="full-account-div">
+                    <Icon class="fas fa-chevron-left back-btn"/>
+                    <Icon class="fas fa-home home-btn"/>
                     <SearchBar />
                     {/* <SavingsCard /> */}
                     <GoogleMap />
@@ -65,3 +68,4 @@ class UserAccount extends Component {
 }
 
 export default UserAccount; 
+

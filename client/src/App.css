@@ -348,8 +348,9 @@ input[type="date"]::after{
 .user-account-div{
     background: rgba(245, 245, 245, 0.6);
     width: 850px;
-    height: 75vh;
+    height: 500px;
     border-radius: 20px;
+    border: solid 1px black; 
     margin: auto;
     margin-top: 8%;
     position: relative;
@@ -369,16 +370,21 @@ input[type="date"]::after{
 .account-user-name {
     font-family: 'Source Sans Pro', sans-serif;
     color: rgb(5, 68, 5);
-    margin-top: 11px !important;
+    text-shadow: 1px 1px white; 
+    margin-top: 5px !important;
     margin-left: 11px;
     width: 400px;
     height: 39px;
-    border-right: solid 1px white; 
+    margin-bottom: 0; 
 }
 
 .year-savings-div{
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-left: 1px solid white;
+    height: 54px;
+    margin-top: 4px; 
 }
 
 .total-savings-div{
@@ -567,11 +573,6 @@ input.prompt{
     width: 350px; 
 }
 
-div.ui.icon.input {
-    margin-left: 190px;
-    margin-top: 40px;
-}
-
 div.results.transition.visible {
     margin-left: 180px; 
 }
@@ -580,8 +581,8 @@ div.results.transition.visible {
     position: absolute; 
     color: rgb(5, 68, 5);
     font-size: 10px; 
-    left: 12px;  
-    top: 65px; 
+    left: 18px;  
+    top: 43px; 
     margin-top: 0; 
     margin-bottom: 0; 
     
@@ -590,8 +591,8 @@ div.results.transition.visible {
     position: absolute;
     color: rgb(5, 68, 5);
     font-size: 10px;
-    left: 12px;
-    top: 77px;
+    left: 18px;
+    top: 53px;
     margin-top: 0;
     margin-bottom: 0; 
 }
@@ -615,28 +616,124 @@ div.results.transition.visible {
 }
 
 .map-div {
-    margin: auto; 
+    margin-left: auto; 
+    margin-right: auto; 
     border: solid 1px;
-    margin-top: 5px; 
+    margin-top: 16px !important; 
     border-radius: 10px; 
     padding: 5px; 
     background-color: rgb(7, 83, 7);  
     position: relative;
 }
 
-.marker-button{
-    background: transparent !important;
-    
+.green-marker{
+    font-size: 25px;
+    color: rgb(35, 161, 35);  
 }
 
-.pin-marker{
-    display: inline-block;
-    font-size: 40px;
-    transform: scale(.4, 1);
-    color: rgb(0, 136, 247); 
+.green-marker:hover{
+    color: rgb(8, 75, 8);   
+    font-size: 26px; 
 }
 
-.pin-marker:hover{
-    color: red;  
-    font-size: 45px; 
+.work-marker{
+    font-size: 20px;
+    color: grey; 
+}
+
+.work-marker:hover{
+    font-size: 21px;
+    color: rgba(255, 255, 255, 0.726); 
+    text-shadow: 2px 2px black; 
+}
+
+.house-marker{
+    font-size: 20px; 
+    color: rgb(1, 98, 110); 
+}
+
+.house-marker:hover{
+    font-size: 21px; 
+    color: rgba(255, 255, 255, 0.726); 
+    text-shadow: 2px 2px black;
+}
+
+.red-marker{
+    font-size: 25px;
+    color: rgb(233, 22, 22);  
+}
+
+.red-marker:hover{
+    font-size: 26px; 
+    color: rgb(122, 10, 10);  
+}
+
+.home-marker-dropup{
+    color: rgb(17, 61, 17); 
+    width: 300px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.work-marker-dropup{
+    color: rgb(17, 61, 17); 
+    width: 325px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+input#search-id.prompt{
+    padding-right: 5px; 
+}
+
+.home-btn {
+    color: white;
+    position: absolute;
+    right: 11px;
+    font-size: 20px;
+    top: 74px;
+    text-shadow: 1px 1px rgb(12, 94, 12); 
+}
+
+.back-btn {
+    color: white;
+    position: absolute;
+    right: 45px;
+    top: 75px;
+    font-size: 20px;
+    text-shadow: 1px 1px rgb(12, 94, 12);
+}
+
+div.ui.search{
+    margin-top: 12px !important; 
+}
+
+.green-dropup{
+    width: 309px;
+    font-size: 12px;
+}
+
+.doctor-name-dropup{
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 174px;
+    border-bottom: 1px solid;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.address-dropdown {
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+.dropup-icon {
+    margin-left: 5px; 
 }

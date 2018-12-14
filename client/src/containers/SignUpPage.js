@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Cookies from 'universal-cookie';
 import Heading from '../component/Heading';
 import Icon from '../component/Icon';
 
@@ -25,10 +24,6 @@ class SignUpPage extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const cookies = new Cookies()
-        cookies.set("fullName", this.state.fullName)
-        cookies.set("email", this.state.email)
-        cookies.set("dob", this.state.dob)
        
         this.props.history.push('/account')
     }
