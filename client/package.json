@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.6.1",
     "dotenv": "^6.2.0",
     "faker": "^4.1.0",
+    "google-map-react": "^1.1.1",
     "google-maps-react": "^2.0.2",
     "lodash": "^4.17.11",
     "minimatch": "^3.0.4",

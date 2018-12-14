@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { LineChart, ColumnChart } from 'react-chartkick';
+import { LineChart } from 'react-chartkick';
 
 class SavingsCard extends Component {
     render() {

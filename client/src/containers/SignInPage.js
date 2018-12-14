@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; 
 import { Link } from "react-router-dom";
 import Heading from '../component/Heading'; 
-import Cookies from 'universal-cookie';
 
 import '../App.css'; 
 
@@ -21,11 +20,7 @@ class SignInPage extends Component {
 
     handleSubmit(event){
         event.preventDefault(); 
-        const cookies = new Cookies(); 
         if (this.state.email === "brian@gmail.com" && this.state.password ==="password"){
-            cookies.remove("fullName")
-            cookies.remove('email')
-            cookies.remove('dob')
             this.props.history.push('/account')
         } else {
             alert("Incorrect User/Password Combo")

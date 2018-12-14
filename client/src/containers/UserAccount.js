@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Heading from '../component/Heading';
 import Savings from '../component/Savings';
 import SearchBar from '../component/SearchBar';
-import SavingsCard from '../component/SavingsCard'; 
+// import SavingsCard from '../component/SavingsCard'; 
+import GoogleMap from './GoogleMap'; 
 
 
 
@@ -55,7 +56,8 @@ class UserAccount extends Component {
                 </div>
                 <div className="full-account-div">
                     <SearchBar />
-                    <SavingsCard />
+                    {/* <SavingsCard /> */}
+                    <GoogleMap />
                 </div>
             </div>
         )
