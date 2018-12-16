@@ -8,7 +8,7 @@ function WorkMarker() {
             </span>
             
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <li className="work-marker-dropup">Work Address: 1106 W Lawrence Ave, Chicago, IL 60640</li>
+                <li className="work-marker-dropup">Work Address: 1506, 5550 S Greenwood Ave, Chicago, IL 60637</li>
             </ul>
         </div>
     )

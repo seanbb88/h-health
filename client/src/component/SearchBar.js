@@ -22,7 +22,10 @@ export default class SearchBar extends Component {
         value: ''
     })
 
-    handleResultsSelect = (e, { result }) => this.setState({ value: result.title })
+    handleResultsSelect = (e, { result }) => {
+        this.setState({ value: result.title }) 
+        
+    }
 
     handleSearchChange = (e, { value }) => {
         this.setState({ isLoading: true, value })
@@ -42,7 +45,6 @@ export default class SearchBar extends Component {
 
     render() {
         const { isLoading, value, results } = this.state
-
         return (
 
             <Search

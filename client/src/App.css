@@ -348,7 +348,7 @@ input[type="date"]::after{
 .user-account-div{
     background: rgba(245, 245, 245, 0.6);
     width: 850px;
-    height: 500px;
+    height: 550px;
     border-radius: 20px;
     border: solid 1px black; 
     margin: auto;
@@ -616,8 +616,7 @@ div.results.transition.visible {
 }
 
 .map-div {
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: 10px; 
     border: solid 1px;
     margin-top: 16px !important; 
     border-radius: 10px; 
@@ -627,45 +626,51 @@ div.results.transition.visible {
 }
 
 .green-marker{
-    font-size: 25px;
+    font-size: 17px;
     color: rgb(35, 161, 35);  
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .green-marker:hover{
     color: rgb(8, 75, 8);   
-    font-size: 26px; 
+    font-size: 18px; 
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .work-marker{
     font-size: 20px;
     color: grey; 
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .work-marker:hover{
     font-size: 21px;
     color: rgba(255, 255, 255, 0.726); 
-    text-shadow: 2px 2px black; 
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .house-marker{
     font-size: 20px; 
-    color: rgb(1, 98, 110); 
+    color: rgb(1, 98, 110);
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .house-marker:hover{
     font-size: 21px; 
     color: rgba(255, 255, 255, 0.726); 
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .red-marker{
-    font-size: 25px;
+    font-size: 17px;
     color: rgb(233, 22, 22);  
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
 }
 
 .red-marker:hover{
-    font-size: 26px; 
+    font-size: 18px; 
     color: rgb(122, 10, 10);  
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .home-marker-dropup{
