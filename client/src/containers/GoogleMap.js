@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import GreenMarker from '../component/GreenMarker';
-import RedMarker from '../component/RedMarker';
+import GreenMarker from './GreenMarker';
+import RedMarker from './RedMarker';
 import HouseMarker from '../component/HouseMarker';
 import WorkMarker from '../component/WorkMarker';
 
+class GoogleMap extends Component {
+    constructor(props) {
+        super(props);
 
-export default class GoogleMap extends Component {
-    static defaultProps = {
-        center: {
-            lat: 41.838890,
-            lng: -87.632156
-        },
-        zoom: 11.35
+        this.state = {
+            mapDivClass: '',
+            visible: false
+        }
 
-    };
+
+    }
+
+    componentWillReceiveProps(props) {
+        const mapClass = props.className
+        this.setState({
+            mapDivClass: mapClass
+        })
+
+    }
+
+
 
     render() {
         return (
-            <div className="map-div" style={{ height: '400px', width: '65%', marginBottom: '5px', marginTop: '5px' }}>
+
+            <div className={this.state.mapDivClass} style={{ height: '365px', width: '90%', overflow: 'visible' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyCDpd7u7nkCtrcdhOi-rKzAmRCBplfd87I' }}
-                    defaultCenter={this.props.center}
-                    defaultZoom={this.props.zoom}
+                    defaultCenter={{ lat: 41.839164, lng: -87.558935 }}
+                    defaultZoom={11.10}
                 >
                     <HouseMarker
                         lat={41.905627}
@@ -40,9 +52,9 @@ export default class GoogleMap extends Component {
                         phone="(312) 926-6000"
                         linkToWeb="https://www.nm.org/doctors/1619162955?utm_source=yext&utm_medium=gmb%20physician&utm_campaign=online%20listings"
                         googlePlusCode="V9VH+HP Chicago, Illinois"
-                        averageCustomerRating="4.7774011"
+                        averageCustomerRating="4.8"
                         valuedRating="5"
-                        reimburseAmt="205.0143147"
+                        reimburseAmt="205.01"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -53,9 +65,9 @@ export default class GoogleMap extends Component {
                         phone="(708) 747-4000"
                         linkToWeb="https://www.franciscanhealth.org/"
                         googlePlusCode="V9QC+7G Chicago, Illinois"
-                        averageCustomerRating="4.4011"
-                        valuedRating="3.4567"
-                        reimburseAmt="208.03147"
+                        averageCustomerRating="4.4"
+                        valuedRating="3.5"
+                        reimburseAmt="208.03"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -66,9 +78,9 @@ export default class GoogleMap extends Component {
                         phone="(708) 747-4000"
                         linkToWeb="https://www.franciscanhealth.org/"
                         googlePlusCode="V9GC+2Q Chicago, Illinois"
-                        averageCustomerRating="4.7774011"
+                        averageCustomerRating="4.8"
                         valuedRating="5"
-                        reimburseAmt="205.0143147"
+                        reimburseAmt="205.01"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -79,9 +91,9 @@ export default class GoogleMap extends Component {
                         phone="(708) 747-4000"
                         linkToWeb="https://www.franciscanhealth.org/"
                         googlePlusCode="V9VH+HP Chicago, Illinois"
-                        averageCustomerRating="4.7774011"
+                        averageCustomerRating="4.8"
                         valuedRating="5"
-                        reimburseAmt="205.0143147"
+                        reimburseAmt="209.85"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -92,22 +104,22 @@ export default class GoogleMap extends Component {
                         phone="(312) 842-7117"
                         linkToWeb="https://www.advocatehealth.com/"
                         googlePlusCode="V9VH+HP Chicago, Illinois"
-                        averageCustomerRating="4.7774011"
+                        averageCustomerRating="4.8"
                         valuedRating="5"
-                        reimburseAmt="205.0143147"
+                        reimburseAmt="198.60"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
                         lat={41.8023698}
-                        lng={-87.5903642}
+                        lng={-87.590}
                         doctor="Rayner Lloris MD"
                         address="1525 E Hyde Park Blvd, Chicago, IL 60615"
                         phone="(773) 643-1600"
                         linkToWeb="https://www.advocatehealth.com/"
                         googlePlusCode="RC26+WP Chicago, Illinois"
-                        averageCustomerRating="2.621325993"
-                        valuedRating="3.51614849"
-                        reimburseAmt="213.9850793"
+                        averageCustomerRating="2.6"
+                        valuedRating="3.5"
+                        reimburseAmt="213.98"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -120,7 +132,7 @@ export default class GoogleMap extends Component {
                         googlePlusCode="R93F+5H Chicago, Illinois"
                         averageCustomerRating="5"
                         valuedRating="5"
-                        reimburseAmt="208.3260523"
+                        reimburseAmt="208.32"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -131,9 +143,9 @@ export default class GoogleMap extends Component {
                         phone="(773) 702-6118"
                         linkToWeb="https://www.uchicagomedicine.org/"
                         googlePlusCode="Q9RV+2P Chicago, Illinois"
-                        averageCustomerRating="2.995022589"
-                        valuedRating="3.568711795"
-                        reimburseAmt="249.9379921"
+                        averageCustomerRating="3.0"
+                        valuedRating="3.6"
+                        reimburseAmt="249.94"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -146,7 +158,7 @@ export default class GoogleMap extends Component {
                         googlePlusCode="Q9J3+FW Chicago, Illinois"
                         averageCustomerRating="5"
                         valuedRating="5"
-                        reimburseAmt="238.0225498"
+                        reimburseAmt="238.02"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -159,7 +171,7 @@ export default class GoogleMap extends Component {
                         googlePlusCode="Q994+J8 Chicago, Illinois"
                         averageCustomerRating="5"
                         valuedRating="5"
-                        reimburseAmt="212.9140932"
+                        reimburseAmt="212.91"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -170,9 +182,9 @@ export default class GoogleMap extends Component {
                         phone="(312) 219-2230"
                         linkToWeb="https://www.onemedical.com/locations/chi/loop-wmadison/"
                         googlePlusCode="V9J8+JM Chicago, Illinois"
-                        averageCustomerRating="4.394022175"
+                        averageCustomerRating="4.4"
                         valuedRating="5"
-                        reimburseAmt="200.0390529"
+                        reimburseAmt="200.04"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -183,9 +195,9 @@ export default class GoogleMap extends Component {
                         phone="(312) 842-9900"
                         linkToWeb="https://www.advocatehealth.com/"
                         googlePlusCode="V94F+77 Chicago, Illinois"
-                        averageCustomerRating="2.725965958"
-                        valuedRating="2.789777129"
-                        reimburseAmt="231.8944224"
+                        averageCustomerRating="2.7"
+                        valuedRating="2.8"
+                        reimburseAmt="231.89"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -196,9 +208,9 @@ export default class GoogleMap extends Component {
                         phone="(773) 321-0200"
                         linkToWeb="https://doctors.advocatehealth.com/i-naveed-k-mallick-chicago-internal-medicine"
                         googlePlusCode="QCV8+G4 Chicago, Illinois"
-                        averageCustomerRating="4.172329571"
-                        valuedRating="4.52323635"
-                        reimburseAmt="243.1945633"
+                        averageCustomerRating="4.2"
+                        valuedRating="4.5"
+                        reimburseAmt="243.19"
                         costSavingsIncentive="0"
                     />
                     <RedMarker
@@ -209,9 +221,9 @@ export default class GoogleMap extends Component {
                         phone="(773) 580-9307"
                         linkToWeb="https://www.advocatehealth.com/"
                         googlePlusCode="QCV6+WQ Chicago, Illinois"
-                        averageCustomerRating="2.964071735"
-                        valuedRating="3.745139453"
-                        reimburseAmt="206.2034679"
+                        averageCustomerRating="2.9"
+                        valuedRating="3.7"
+                        reimburseAmt="206.20"
                         costSavingsIncentive="0"
                     />
                     <GreenMarker
@@ -222,10 +234,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 503-6400"
                         linkToWeb="https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=35420"
                         googlePlusCode="V9WM+F5 Chicago, Illinois"
-                        averageCustomerRating="2.723996335"
-                        valuedRating="3.204101316"
-                        reimburseAmt="145.8512966"
-                        costSavingsIncentive="27.0743517"
+                        averageCustomerRating="2.7"
+                        valuedRating="3.2"
+                        reimburseAmt="145.85"
+                        costSavingsIncentive="27.07"
                     />
                     <GreenMarker
                         lat={41.8938988}
@@ -248,10 +260,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 926-2000"
                         linkToWeb="https://www.nm.org/"
                         googlePlusCode="QCV6+WQ Chicago, Illinois"
-                        averageCustomerRating="3.567"
-                        valuedRating="3.745139453"
-                        reimburseAmt="131.1110874"
-                        costSavingsIncentive="34.67654"
+                        averageCustomerRating="3.56"
+                        valuedRating="3.7"
+                        reimburseAmt="131.11"
+                        costSavingsIncentive="34.68"
                     />
                     <GreenMarker
                         lat={41.8909108}
@@ -261,10 +273,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 929-4492"
                         linkToWeb="https://chicagoexpressdoctors.com/"
                         googlePlusCode="V9R5+9X Chicago, Illinois"
-                        averageCustomerRating="3.95678"
-                        valuedRating="4.44456"
+                        averageCustomerRating="3.9"
+                        valuedRating="4.4"
                         reimburseAmt="103.57"
-                        costSavingsIncentive="10.89075"
+                        costSavingsIncentive="10.89"
                     />
                     <GreenMarker
                         lat={41.8864496}
@@ -274,9 +286,9 @@ export default class GoogleMap extends Component {
                         phone="(312) 261-0872"
                         linkToWeb="https://www.dryateshairscience.com/"
                         googlePlusCode="V9PH+H6 Chicago, Illinois"
-                        averageCustomerRating="2.97735"
-                        valuedRating="3.5453"
-                        reimburseAmt="201.2034679"
+                        averageCustomerRating="2.9"
+                        valuedRating="3.5"
+                        reimburseAmt="201.20"
                         costSavingsIncentive="0"
                     />
                     <GreenMarker
@@ -287,10 +299,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 236-3642"
                         linkToWeb="https://chicagoent.com/"
                         googlePlusCode="V9MG+52 Chicago, Illinois"
-                        averageCustomerRating="3.964071735"
-                        valuedRating="4.745139453"
-                        reimburseAmt="202.034679"
-                        costSavingsIncentive="10.02352"
+                        averageCustomerRating="4.0"
+                        valuedRating="4.7"
+                        reimburseAmt="202.03"
+                        costSavingsIncentive="10.02"
                     />
                     <GreenMarker
                         lat={41.8813556}
@@ -300,10 +312,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 374-5860"
                         linkToWeb="https://imaginemd.net/"
                         googlePlusCode="V9J6+G8 Chicago, Illinois"
-                        averageCustomerRating="2.964071735"
-                        valuedRating="3.745139453"
-                        reimburseAmt="206.2034679"
-                        costSavingsIncentive="15.56433"
+                        averageCustomerRating="2.9"
+                        valuedRating="3.7"
+                        reimburseAmt="206.20"
+                        costSavingsIncentive="15.56"
                     />
                     <GreenMarker
                         lat={41.8800079}
@@ -313,10 +325,10 @@ export default class GoogleMap extends Component {
                         phone="(847) 733-5707"
                         linkToWeb="https://www.northshore.org/"
                         googlePlusCode="QCV6+WQ Chicago, Illinois"
-                        averageCustomerRating="2.964071735"
-                        valuedRating="3.745139453"
-                        reimburseAmt="206.2034679"
-                        costSavingsIncentive="23.333343535"
+                        averageCustomerRating="3.1"
+                        valuedRating="3.7"
+                        reimburseAmt="206.20"
+                        costSavingsIncentive="23.33"
                     />
                     <GreenMarker
                         lat={41.8750841}
@@ -326,10 +338,10 @@ export default class GoogleMap extends Component {
                         phone="(708) 747-4000"
                         linkToWeb="https://www.franciscanhealth.org/"
                         googlePlusCode="V9G5+29 Chicago, Illinois"
-                        averageCustomerRating="2.964071735"
-                        valuedRating="3.745139453"
-                        reimburseAmt="206.2034679"
-                        costSavingsIncentive="1.4245654"
+                        averageCustomerRating="2.7"
+                        valuedRating="3.7"
+                        reimburseAmt="206.20"
+                        costSavingsIncentive="1.42"
                     />
                     <GreenMarker
                         lat={41.8088554}
@@ -341,8 +353,8 @@ export default class GoogleMap extends Component {
                         googlePlusCode="RC52+GV Chicago, Illinois"
                         averageCustomerRating="5"
                         valuedRating="5"
-                        reimburseAmt="154.4024889"
-                        costSavingsIncentive="22.79875557"
+                        reimburseAmt="154.40"
+                        costSavingsIncentive="22.80"
                     />
                     <GreenMarker
                         lat={41.799737}
@@ -352,10 +364,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 434-9216"
                         linkToWeb="https://www.achn.net/"
                         googlePlusCode="Q8XP+X6 Chicago, Illinois"
-                        averageCustomerRating="4.308492641"
+                        averageCustomerRating="4.3"
                         valuedRating="5"
-                        reimburseAmt="116.8700415"
-                        costSavingsIncentive="41.56497923"
+                        reimburseAmt="116.87"
+                        costSavingsIncentive="41.56"
                     />
                     <GreenMarker
                         lat={41.7993638}
@@ -365,10 +377,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 288-2020"
                         linkToWeb="http://www.veenaarunmd.com/"
                         googlePlusCode="QCX6+PQ Chicago, Illinois"
-                        averageCustomerRating="4.543568027"
+                        averageCustomerRating="4.5"
                         valuedRating="5"
-                        reimburseAmt="140.3580495"
-                        costSavingsIncentive="29.82097523"
+                        reimburseAmt="140.36"
+                        costSavingsIncentive="29.82"
                     />
                     <GreenMarker
                         lat={41.7883168}
@@ -378,10 +390,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 695-7269"
                         linkToWeb="https://www.nm.org/"
                         googlePlusCode="Q9QW+85 Chicago, Illinois"
-                        averageCustomerRating="2.152338722"
-                        valuedRating="2.866848624"
-                        reimburseAmt="192.5425292"
-                        costSavingsIncentive="3.728735385"
+                        averageCustomerRating="2.1"
+                        valuedRating="2.8"
+                        reimburseAmt="192.54"
+                        costSavingsIncentive="3.73"
                     />
                     <GreenMarker
                         lat={41.7842969}
@@ -391,10 +403,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 651-9200"
                         linkToWeb="https://www.nm.org/"
                         googlePlusCode="Q9M3+JW Chicago, Illinois"
-                        averageCustomerRating="3.947188775"
-                        valuedRating="4.032352572"
-                        reimburseAmt="185.196117"
-                        costSavingsIncentive="7.401941498"
+                        averageCustomerRating="3.9"
+                        valuedRating="4.0"
+                        reimburseAmt="185.19"
+                        costSavingsIncentive="7.40"
                     />
                     <GreenMarker
                         lat={41.7796642}
@@ -404,10 +416,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 487-5224"
                         linkToWeb="https://doctors.advocatehealth.com/p-maria-bautista-chicago-family-medicine-2"
                         googlePlusCode="Q9H7+VX Chicago, Illinois"
-                        averageCustomerRating="2.393918735"
-                        valuedRating="2.722240531"
-                        reimburseAmt="131.5740611"
-                        costSavingsIncentive="34.21296945"
+                        averageCustomerRating="2.4"
+                        valuedRating="2.7"
+                        reimburseAmt="131.57"
+                        costSavingsIncentive="34.21"
                     />
                     <GreenMarker
                         lat={41.7883168}
@@ -417,10 +429,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 702-9500"
                         linkToWeb="https://medicine.uchicago.edu/"
                         googlePlusCode="Q9QW+85 Chicago, Illinois"
-                        averageCustomerRating="3.003580502"
-                        valuedRating="3.519409164"
-                        reimburseAmt="198.6313344"
-                        costSavingsIncentive="0.6843327855"
+                        averageCustomerRating="3.0"
+                        valuedRating="3.5"
+                        reimburseAmt="198.63"
+                        costSavingsIncentive="0.68"
                     />
                     <GreenMarker
                         lat={41.8157531}
@@ -432,8 +444,8 @@ export default class GoogleMap extends Component {
                         googlePlusCode="R98F+78 Chicago, Illinois"
                         averageCustomerRating="5"
                         valuedRating="5"
-                        reimburseAmt="175.920743"
-                        costSavingsIncentive="12.03962849"
+                        reimburseAmt="175.92"
+                        costSavingsIncentive="12.03"
                     />
                     <GreenMarker
                         lat={41.8347571}
@@ -443,10 +455,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 225-5785"
                         linkToWeb="http://totalcarechicago.com/"
                         googlePlusCode="R9M8+WW Chicago, Illinois"
-                        averageCustomerRating="3.661717506"
-                        valuedRating="4.152609843"
-                        reimburseAmt="181.9394715"
-                        costSavingsIncentive="9.030264268"
+                        averageCustomerRating="3.7"
+                        valuedRating="4.1"
+                        reimburseAmt="181.94"
+                        costSavingsIncentive="9.03"
                     />
                     <GreenMarker
                         lat={41.8466264}
@@ -456,10 +468,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 784-2822"
                         linkToWeb="https://locations.advocatehealth.com/advocate-medical-group-2535-s-martin-luther-king-dr-chicago-il"
                         googlePlusCode="R9WM+P3 Chicago, Illinois"
-                        averageCustomerRating="3.761443963"
-                        valuedRating="4.363338907"
-                        reimburseAmt="168.4281808"
-                        costSavingsIncentive="15.78590958"
+                        averageCustomerRating="3.8"
+                        valuedRating="4.4"
+                        reimburseAmt="168.43"
+                        costSavingsIncentive="15.79"
                     />
                     <GreenMarker
                         lat={41.8682369}
@@ -471,8 +483,8 @@ export default class GoogleMap extends Component {
                         googlePlusCode="V999+75 Chicago, Illinois"
                         averageCustomerRating="5"
                         valuedRating="5"
-                        reimburseAmt="133.4859626"
-                        costSavingsIncentive="33.25701871"
+                        reimburseAmt="133.48"
+                        costSavingsIncentive="33.26"
                     />
                     <GreenMarker
                         lat={41.8806378}
@@ -482,10 +494,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 201-1234"
                         linkToWeb="https://www.michiganavenueimmediatecare.org/"
                         googlePlusCode="V9JG+64 Chicago, Illinois"
-                        averageCustomerRating="3.551622986"
-                        valuedRating="4.078709799"
-                        reimburseAmt="180.0331038"
-                        costSavingsIncentive="9.983448096"
+                        averageCustomerRating="3.6"
+                        valuedRating="4.1"
+                        reimburseAmt="180.03"
+                        costSavingsIncentive="9.98"
                     />
                     <GreenMarker
                         lat={41.8810727}
@@ -495,10 +507,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 942-3100"
                         linkToWeb="https://www.rush.edu/locations/rush-primary-care-loop?utm_source=listing&utm_medium=organic&utm_campaign=yext"
                         googlePlusCode="V9J8+C3 Chicago, Illinois"
-                        averageCustomerRating="3.700518473"
-                        valuedRating="3.749657503"
-                        reimburseAmt="145.3052877"
-                        costSavingsIncentive="27.34735615"
+                        averageCustomerRating="3.7"
+                        valuedRating="3.7"
+                        reimburseAmt="145.30"
+                        costSavingsIncentive="27.35"
                     />
                     <GreenMarker
                         lat={41.8847856}
@@ -508,10 +520,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 201-1234"
                         linkToWeb="https://www.michiganavenueimmediatecare.org/"
                         googlePlusCode="V9PG+62 Chicago, Illinois"
-                        averageCustomerRating="4.002819508"
-                        valuedRating="4.826053276"
-                        reimburseAmt="133.4666099"
-                        costSavingsIncentive="33.26669507"
+                        averageCustomerRating="4.0"
+                        valuedRating="4.8"
+                        reimburseAmt="133.47"
+                        costSavingsIncentive="33.26"
                     />
                     <GreenMarker
                         lat={41.8855085}
@@ -521,10 +533,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 201-1234"
                         linkToWeb="https://www.michiganavenueimmediatecare.org/"
                         googlePlusCode="V9PG+62 Chicago, Illinois"
-                        averageCustomerRating="3.695758942"
-                        valuedRating="4.452834199"
-                        reimburseAmt="129.6316945"
-                        costSavingsIncentive="35.18415274"
+                        averageCustomerRating="3.7"
+                        valuedRating="4.4"
+                        reimburseAmt="129.63"
+                        costSavingsIncentive="35.18"
                     />
                     <GreenMarker
                         lat={41.8806378}
@@ -534,10 +546,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 201-1234"
                         linkToWeb="https://www.michiganavenueimmediatecare.org/"
                         googlePlusCode="V9JG+32 Chicago, Illinois"
-                        averageCustomerRating="3.772128468"
-                        valuedRating="3.776478821"
-                        reimburseAmt="185.9854356"
-                        costSavingsIncentive="7.007282201"
+                        averageCustomerRating="3.8"
+                        valuedRating="3.8"
+                        reimburseAmt="185.98"
+                        costSavingsIncentive="7.01"
                     />
                     <GreenMarker
                         lat={41.8708168}
@@ -547,10 +559,10 @@ export default class GoogleMap extends Component {
                         phone="(312) 583-1066"
                         linkToWeb="https://www.thorek.org/"
                         googlePlusCode="V9CF+8G Chicago, Illinois"
-                        averageCustomerRating="2.239497371"
-                        valuedRating="2.328464783"
-                        reimburseAmt="173.95689"
-                        costSavingsIncentive="13.021555"
+                        averageCustomerRating="2.2"
+                        valuedRating="2.3"
+                        reimburseAmt="173.95"
+                        costSavingsIncentive="13.02"
                     />
                     <GreenMarker
                         lat={41.7997345}
@@ -560,10 +572,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 493-8212"
                         linkToWeb="https://doctors.advocatehealth.com/i-roberto-p-ramirez-orland-park-internal-medicine"
                         googlePlusCode=""
-                        averageCustomerRating="4.515474879"
-                        valuedRating="3.56"
-                        reimburseAmt="109.6362583"
-                        costSavingsIncentive="24.18187087"
+                        averageCustomerRating="4.5"
+                        valuedRating="3.6"
+                        reimburseAmt="109.63"
+                        costSavingsIncentive="24.18"
                     />
                     <GreenMarker
                         lat={41.8023698}
@@ -573,10 +585,10 @@ export default class GoogleMap extends Component {
                         phone="(773) 643-1600"
                         linkToWeb="https://www.advocatehealth.com/"
                         googlePlusCode="RC26+WP Chicago, Illinois"
-                        averageCustomerRating="3.661475385"
-                        valuedRating="4.478906171"
-                        reimburseAmt="143.3119603"
-                        costSavingsIncentive="28.34401986"
+                        averageCustomerRating="3.6"
+                        valuedRating="4.4"
+                        reimburseAmt="143.31"
+                        costSavingsIncentive="28.34"
                     />
                     <GreenMarker
                         lat={41.8090487}
@@ -586,16 +598,17 @@ export default class GoogleMap extends Component {
                         phone="(773) 493-8212"
                         linkToWeb="https://www.nm.org/"
                         googlePlusCode="RC54+J9 Chicago, Illinois"
-                        averageCustomerRating="4.746450833"
-                        valuedRating="5"
-                        reimburseAmt="191.0334595"
-                        costSavingsIncentive="4.483270241"
+                        averageCustomerRating="3.8"
+                        valuedRating="4.2"
+                        reimburseAmt="134.31"
+                        costSavingsIncentive="14.39"
                     />
                 </GoogleMapReact>
             </div>
         )
+
     }
 
 }
 
-
+export default GoogleMap; 
